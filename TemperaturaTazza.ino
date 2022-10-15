@@ -1,5 +1,12 @@
+float vref = 3.0;
+float resolution = vref/1023;
+const int speaker_pin = 4;  //D2
+int frequency = 1000;  //frequenza per il beep (in Hz)
+const int red_light_pin = 15; //D8
+const int green_light_pin = 13; //D7
+const int blue_light_pin = 12; //D6
+
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(9600);
   pinMode(SPEAKER_PIN, OUTPUT);
   pinMode(red_light_pin, OUTPUT);
@@ -28,7 +35,7 @@ void loop() {
      delay(2000);
      noTone(SPEAKER_PIN);
   }
-  delay(30000);
+  delay(8000);
 }
 
 void RGB_color(int red_light_value, int green_light_value, int blue_light_value) {
