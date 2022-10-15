@@ -8,7 +8,7 @@ const int blue_light_pin = 12; //D6
 
 void setup() {
   Serial.begin(9600);
-  pinMode(SPEAKER_PIN, OUTPUT);
+  pinMode(speaker_pin, OUTPUT);
   pinMode(red_light_pin, OUTPUT);
   pinMode(green_light_pin, OUTPUT);
   pinMode(blue_light_pin, OUTPUT);
@@ -31,9 +31,9 @@ void loop() {
   }
 
   if (temperature > 39.0 && temperature <41.0) {
-     tone(SPEAKER_PIN, frequency);
+     tone(speaker_pin, frequency);
      delay(2000);
-     noTone(SPEAKER_PIN);
+     noTone(speaker_pin);
   }
   delay(8000);
 }
